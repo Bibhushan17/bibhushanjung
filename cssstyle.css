@@ -7,23 +7,79 @@
 }
 body 
 {
-    height: 90vh;
-	display: flex;
+	/* display: flex; */
 	justify-content:center;
 	align-items: center;
     margin-left: 5%;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 .circle
 {
-    width: 300;
+    width: 300px;
     clip-path: circle();
-	margin-top: 25px;
+	margin-top: 10px;
 }
-.circle1
+li, a, button
 {
-    width: 250px;
-    clip-path: circle();
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	font-size: 20px;
+	color: rgb(41, 26, 26);
+	text-decoration: none;
+}
+header 
+{
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	padding: 20px 10%;
+	margin-left: 20%;	
+	margin-top: -15%;
+}
+nav 
+{
+	order: 3;
+}
+.nav__links
+{
+	list-style: none;
+}
+.nav__links li 
+{
+	display: inline-block;
+	padding: 10px 30px;
+}
+.nav__links li a
+{
+	transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover 
+{
+	color: teal;
+}
+cta 
+{
+	order: 2;
+}
+button{
+	/* margin-left: 20px; */
+	padding: 10px 30px;
+	background-color: rgb(147, 207, 160);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+button:hover
+{
+	background-color: teal;
+}
+.img-gif
+{
+	display: flex;
+	justify-content: right; 
+	align-items: right;
+	margin-top: 5%;
 }
 .social
 {
@@ -36,7 +92,7 @@ body
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight: lighter;
 
-	margin-top: 90;
+	margin-top: 25px;
 	margin-left: 20px;
 
 }
@@ -46,5 +102,6 @@ body
 	font-weight: lighter;
 	font-family: serif;
 	text-align: center;
+	margin-top: 10%;
 }
 
