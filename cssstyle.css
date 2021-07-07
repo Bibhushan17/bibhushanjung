@@ -1,0 +1,50 @@
+*
+{
+    box-sizing: border-box;
+    background-color: #f7dfbb;
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    height: 90vh;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.circle
+{
+    width: 300;
+    clip-path: circle();
+	margin-top: 25px;
+}
+.circle1
+{
+    width: 250px;
+    clip-path: circle();
+}
+.social
+{
+	text-align: center;
+	font-size: 20px;
+
+	align-items: center;
+	align-content: center;
+
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+
+	margin-top: 90;
+	margin-left: 20px;
+
+}
+.para1
+{
+	font-size: 20px;
+	font-weight: lighter;
+	font-family: serif;
+	text-align: center;
+}
+
