@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibhushan Jung Sijapati</title>
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+<!--     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet"> -->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
