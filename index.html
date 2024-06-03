@@ -283,55 +283,106 @@
                 display: none;
             }
         }
-         /* iphone XR */
+          /* iphone XR/ iphone 11 */
          @media (max-width: 415px) {
-            .firsth1, .firsth2, .firstp {
-                /* margin-left: 5%; */
-                width: 55%;
+            body
+            {
+                overflow: hidden;
+                overflow-y: scroll;
+                overflow-x: hidden;
             }
-            .firsth1 {
+       
+            .nav1 {
+                display: none;
+                flex-direction: column;
+                width: 10%; 
+                align-items: center;
+                
+            }
+            .nav1.active {
+                display: flex;
+                font-size: 10px ;
+                
+            }
+            .toggle-button {
+                display: flex;
+            }
+            .nav1 li {
+                margin: 0px 0;
+            }
+           .nav1 li a {
+                margin: 0px 0;
                 font-size: 5vw;
-                top: 50px;
-                margin-left: 13%;
-
-
+            }
+            
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            /* html
+            {
+                font-size: 50%;
+                
+             }  */
+             .firsth1, .firsth2, .firstp {
+                /* margin-left: 5%; */
+                /* width: 55%; */
+             }
+            
+            .firsth1 {
+                font-size: 7.2vw;
+                top: 50vw;
+                margin-left: 15vw;
             }
             .firsth2 {
-                font-size: 2.5vw;
-                top: 73px;
-                margin-left: 13%;
+                font-size: 4.5vw;
+                top: 53vw;
+                margin-left: 15vw;
 
             }
             .firstp {
-                font-size: 2vw;
-                max-width: 200px;
-                margin-top: -62%;
-                margin-left: 55px;
+                font-size: 4.6vw;
+                max-width: 100%;
+                margin-top: -10vw;
+                margin-left: 15vw;
+                
+            }
+            .box1 .firstp
+            {
+                width: 75vw;
             }
             .container {
                 flex-direction: column;
                 align-items: center;
-                padding: 0 5%;
+                padding: 0 5vw;
 
             }
             .imgx {
                 /* margin-left: 0; */
-                top: 80px;
-                /* width: 20%; */
-                max-width: 150px;
-                margin-left: 100px;
+                top: 180vw;
+                /* max-width: 150px; */
+                margin-left: -10vw;
+                
+            }
+            .imgx img
+            {
+                width: 50vw;
+                height:25vh;
+                display: none;   
+                /* hiding image for design quality */
             }
             .btn1 {
                 /* top: 700px; */
-                margin-left: -46%;
+                /* margin-left: -40vw; */
                 width: 100%;
                 justify-content: center;
-                margin-top: -105%
+                margin-top: -36vw;
             }
             .btn1 .button-4
             {
-                font-size: 12px;
-                padding: 5px;
+                font-size: 4vw;
+                padding: 3vw;
             }
             .left-content, .right-content {
                 position: static;
@@ -355,7 +406,7 @@
 
             .left-content
             {
-                margin-top:-30px;
+                margin-top:30px;
             }
             .right-content
             {
@@ -364,6 +415,7 @@
             }
             
         }
+ 
         /* iphone se */
         @media (max-width: 376px) {
             .firsth1, .firsth2, .firstp {
