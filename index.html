@@ -22,7 +22,8 @@
             background-color: #064963;
             position: fixed;
             top: 0;
-            width: 185rem;
+            /* width: 120vw; */
+            width: 100%;
             color: white;
             padding: 1rem 0;
             z-index: 1000;
@@ -220,6 +221,101 @@
             font-size: 2.5rem;
             padding: 1.5rem;
 
+        }
+
+    
+
+      /* asus zenbook fold  */
+      @media (max-width: 853px) {
+            .firsth1, .firsth2, .firstp {
+                /* margin-left: 5%; */
+                width: 95%;
+            }
+            .firsth1 {
+                font-size: 8vw;
+                top: 5vw;
+                margin-left: 10vw;
+                white-space: nowrap;
+            }
+            .firsth2 {
+                font-size: 3.3vw;
+                top: 15vw;
+                margin-left: 10vw;
+
+            }
+            .firstp {
+                font-size: 3vw;
+                max-width: 80vw;
+                font-weight: lighter;
+                margin-top: -25vw;
+                margin-left: 100px;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 5%;
+
+            }
+            .imgx {
+                /* margin-left: 0; */
+                top: 60vw;
+                /* width: 20%; */
+                max-width: 350px;
+                margin-left: 300px;
+            }
+            .imgx img
+            {
+                width: 30vw;
+                height: 30vw;
+            }
+            .btn1 {
+                /* top: 700px; */
+                margin-left: -40vw;
+                width: 100%;
+                justify-content: center;
+                margin-top: -20vw;
+            }
+            .btn1 .button-4
+            {
+                font-size: 3vw;
+                padding: 2vw;
+                color: #a8d1bb;
+            }
+            .button-4
+            {
+                border-color: #03222c;
+                box-shadow: .1px .1px .1px 3px #03313f2b;
+            }
+            .left-content, .right-content {
+                position: static;
+                width: 100%;
+                text-align: center;
+            }
+    
+            .vertical-line {
+                display: none;
+            }
+            .email p
+            {
+                font-size: 3vw;
+            }
+           
+            .content img 
+            {
+                width: 35px;
+                margin-bottom: -3px;
+            }
+
+            .left-content
+            {
+                margin-top:13vw;
+            }
+            .right-content
+            {
+                margin-top:-30px;
+                margin-left: 2px;
+            }
+            
         }
 
 
@@ -587,12 +683,12 @@
                 display: none;
                 flex-direction: column;
                 width: 100%; 
-                align-items: center;
-                
+               
             }
             .nav1.active {
                 display: flex;
                 font-size: 10px ;
+                
                 
             }
             .toggle-button {
@@ -719,7 +815,7 @@
             .nav1 {
                 display: none;
                 flex-direction: column;
-                width: 100%; 
+                width: 10%; 
                 align-items: center;
                 
             }
@@ -852,7 +948,7 @@
             .nav1 {
                 display: none;
                 flex-direction: column;
-                width: 50%; 
+                width: 10%; 
                 align-items: center;
                 
             }
@@ -972,12 +1068,147 @@
             }
             
         }
-          
 
+
+
+             /* ios 4 */
+             @media (max-width: 320px) {
+            body
+            {
+                overflow: hidden;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
        
+            .nav1 {
+                display: none;
+                flex-direction: column;
+                width: 100%; 
+                align-items: center;
+                
+            }
+            .nav1.active {
+                display: flex;
+                font-size: 10px ;
+                
+            }
+            .toggle-button {
+                display: flex;
+            }
+            .nav1 li {
+                margin: 0px 0;
+            }
+           .nav1 li a {
+                margin: 0px 0;
+                font-size: 5vw;
+            }
+            
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            /* html
+            {
+                font-size: 50%;
+                
+             }  */
+             /* .firsth1, .firsth2, .firstp {
+                margin-left: 5%;
+                width: 55%;
+             } */
+            
+            .firsth1 {
+                font-size: 7vw;
+                top: 20vw;
+                margin-left: 15vw;
+            }
+            .firsth2 {
+                font-size: 4vw;
+                top: 22vw;
+                margin-left: 15vw;
+
+            }
+            .firstp {
+                font-size: 3.5vw;
+                max-width: 80%;
+                margin-top: -10vw;
+                margin-left: 15vw;
+                
+            }
+            .box1 .firstp
+            {
+                width: 100%;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 5vw;
+
+            }
+            .imgx {
+                /* margin-left: 0; */
+                top: 180vw;
+                /* max-width: 150px; */
+                margin-left: -10vw;
+                
+            }
+            .imgx img
+            {
+                width: 50vw;
+                height:25vh;
+                display: none;   
+                /* hiding image for design quality */
+            }
+            .btn1 {
+                /* top: 700px; */
+                /* margin-left: -40vw; */
+                width: 100%;
+                justify-content: center;
+                margin-top: -110vw;
+                margin-left: 0vw ;
+            }
+            .btn1 .button-4
+            {
+                font-size: 4vw;
+                padding: 3vw;
+            }
+            .left-content, .right-content {
+                position: static;
+                width: 100%;
+                text-align: center;
+            }
+    
+            .vertical-line {
+                display: none;
+            }
+            .email p
+            {
+                font-size: 3vw;
+            }
+           
+            .content img 
+            {
+                width: 20px;
+                margin-bottom: -3px;
+            }
+
+            .left-content
+            {
+                margin-top:-10px;
+            }
+            .right-content
+            {
+                margin-top:-30px;
+                margin-left: 2px;
+                display: none;
+            }
+         
+        }
 
 
 
+    
         
  
 </style>
