@@ -7,10 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
-        html
-            {
-                font-size: 62.5%;
-            }
+
         body {
             background-color: #0D455A;
             margin: 0;
@@ -22,9 +19,9 @@
             background-color: #064963;
             position: fixed;
             top: 0;
-            width: 191rem;
+            width: 100%;
             color: white;
-            padding: 1rem 0;
+            padding: 10px 0;
             z-index: 1000;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         }
@@ -37,32 +34,61 @@
             margin: 0;
         }
         .nav1 li {
-            margin: 0 5rem;
-            padding: 2rem;
+            margin: 0 50px;
+            padding: 20px;
         }
         .nav1 li a {
             text-decoration: none;
             color: white;
-            font-size: 2rem;
+            font-size: 20px;
         }
         .toggle-button {
             display: none;
             flex-direction: column;
             justify-content: space-between;
-            width: 3rem;
-            height: 2.1rem;
+            width: 30px;
+            height: 21px;
             cursor: pointer;
             margin-left: 20px;
         }
         .toggle-button span {
-            height: .3rem;
+            height: 3px;
             width: 100%;
             background-color: white;
-            border-radius: .1rem;
+            border-radius: 10px;
         }
-     
+        @media (max-width: 834px) {
+            .nav1 {
+                display: none;
+                flex-direction: column;
+                width: 50%; 
+                align-items: center;
+            }
+            .nav1.active {
+                display: flex;
+                font-size: 12px;
+                
+            }
+            .toggle-button {
+                display: flex;
+            }
+            .nav1 li {
+                margin: 0px 0;
+            }
+\            .nav1 li a {
+                margin: 0px 0;
+                font-size: 12px;
+
+            }
+            
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
         .firsth1 {
-            top: 1.6rem;
+            top: 160px;
             margin-left: 10%;
             color: #30FFDA;
             font-size: 5vw; /* Responsive font size */
@@ -71,7 +97,7 @@
         }
         .firsth2 {
             top: 280px;
-            margin-top: 4.5rem;
+            margin-top: 15px;
             margin-left: 10%;
             color: #5BD6FC;
             font-size: 3vw; /* Responsive font size */
@@ -79,7 +105,7 @@
             position: absolute;
         }
         .firstp {
-            top: 4rem;
+            top: 350px;
             margin-left: 10%;
             color: #B3E0EE;
             font-size: 1.5vw; /* Responsive font size */
@@ -88,37 +114,37 @@
             width: 50%;
         }
         .container {
-            top: 5rem;
+            top: 500px;
             display: flex;
             justify-content: space-between;
             padding: 0 10%;
-            margin-top: 13rem; /* Adjusted for positioning below the navbar */
+            margin-top: 100px; /* Adjusted for positioning below the navbar */
         }
         .left-content, .right-content {
             position: fixed;
-            top: 50vh; /* Adjust according to the height of the navbar */
+            top: 300px; /* Adjust according to the height of the navbar */
         }
         .left-content {
-            left: 8rem; /* Adjust to your desired left positioning */
+            left: 80px; /* Adjust to your desired left positioning */
         }
         .right-content {
-            right: 8rem; /* Adjust to your desired right positioning */
+            right: 80px; /* Adjust to your desired right positioning */
         }
         .left-content .content, .right-content .content {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 25px;
         }
         .content img {
-            width: 3.5rem;
+            width: 35px;
             height: auto;
         }
         .vertical-line {
-            height: 160rem;
-            border-left: .2rem solid #48B5D6;
-            margin-left: 1.5rem; /* Adjusted for spacing */
+            height: 160px;
+            border-left: 2px solid #48B5D6;
+            margin-left: 15px; /* Adjusted for spacing */
         }
         .email {
             display: flex;
@@ -130,49 +156,49 @@
             writing-mode: vertical-rl;
             transform: rotate(180deg);
             color: #30FFDA;
-            margin-left: 7.0rem;
+            margin-left: 70px;
             margin: 0;
-            font-size: 2.2rem;
+            font-size: 22px;
         }
         .box1
         {
             /* margin-left: 10%; */
         }
         .box1 p {
-            top:45vh;
+            top: 380px;
         }
         .imgx {
-            top: 35vh;
-            left: 10vh;
-            margin-left: 115vh;
+            top: 280px;
+            left: 100px;
+            margin-left: 850px;
             position: absolute;
-            width: 55vh; 
+            width: 550px; 
             height: auto; /* Maintain aspect ratio */
         }
         .imgx img {
-            width: 30rem; /* Ensure the image fits within the container */
+            width: 50%; /* Ensure the image fits within the container */
             height: auto; /* Maintain aspect ratio */
-            box-shadow: 0px 0px 1rem 0px #00C2FF;
-            margin-left: 7rem;
+            box-shadow: 0px 0px 9px 0px #00C2FF;
+            margin-left: 100px;
 
         }
         /* Button styling */
         .button-4 {
             appearance: none;
             background-color: transparent; /* No background color */
-            border: .2rem solid #0196C1;
-            border-radius: .6rem;
-            box-shadow: rgba(27, 31, 35, 0.04) 0 .1rem 0, rgba(255, 255, 255, 0.25) 0 .1rem 0 inset;
+            border: 2px solid #0196C1;
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
             box-sizing: border-box;
             color: #0196C1; /* Set text color */
             cursor: pointer;
             display: inline-block;
             font-family: 'Salsa', sans-serif; /* Change font here */
-            font-size: 1.8rem;
+            font-size: 18px;
             font-weight: 500;
-            line-height: 2.0rem;
+            line-height: 20px;
             list-style: none;
-            padding: .6rem 1.6rem;
+            padding: 6px 16px;
             position: relative;
             user-select: none;
             -webkit-user-select: none;
@@ -194,7 +220,7 @@
             transition: none 0s;
         }
         .button-4:focus {
-            outline: .1rem transparent;
+            outline: 1px transparent;
         }
         .button-4:before {
             display: none;
@@ -211,16 +237,9 @@
             /* margin-left: 10%; */
         }
         .container .btn1 {
-            top: 70rem;
-
+            top: 630px;
         }
-     
-        .button-4
-        {
-            font-size: 2.5rem;
-            padding: 1.5rem;
 
-        }
         @media (max-width: 834px) {                                                
             .nav1 {
                 display: none;
@@ -250,7 +269,6 @@
                 align-items: flex-start;
             }
         }
-
          /* iphone XR/ iphone 11 */
          @media (max-width: 415px) {
             body
@@ -383,7 +401,7 @@
             }
             
         }
- 
+
 </style>
 </head>
 <body>
@@ -399,6 +417,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="work.html">Work</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a  style="font-size:10px; color:yellow" href="#">Working on Page Responsiveness</a></li>
         </ul>
     </nav>
     <div class="box1">
@@ -416,7 +435,7 @@
                 <a href="https://www.instagram.com/its_big_b_/" target="_blank"><img src="instagram logo.svg" alt="insta"></a>
                 <a href="https://github.com/Bibhushan17" target="_blank"><img src="git hub logo.svg" alt="github"></a>
                 <a href="https://www.linkedin.com/in/bibhushan-jung-sijapati-82787a196/" target="_blank"><img src="linked in logo.svg" alt="linkedin"></a>
-                <a href="https://www.facebook.com/bibhushanjung.sijapati.3/" target="_blank"><img style="margin-bottom:5rem;" src="fb logo.svg" alt="linkedin"></a>
+                <a href="https://www.facebook.com/bibhushanjung.sijapati.3/" target="_blank"><img style="margin-bottom:50px;" src="fb logo.svg" alt="linkedin"></a>
             </div>
             <div class="vertical-line"></div>
         </div>
