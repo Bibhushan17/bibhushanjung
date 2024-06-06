@@ -223,12 +223,14 @@
         }
         .btn1 .button-4
         {
-            margin-top: -155vw;
+            margin-top: -135vw;
             font-size: 1.5vw;
             padding: 1vw;
             border-color: rgb(100, 190, 164);
         }
       
+      
+   
         .gif-1
         {
             width: 40%;
@@ -303,7 +305,8 @@
 
 
              /* Responsive design */
-             @media (max-width: 768px) {
+             @media (max-width: 768px) and (orientation: landscape)
+              {
             .firsth1, .firsth2, .firstp {
                 margin-left: 5%;
                 width: 90%;
@@ -347,6 +350,8 @@
             }
         }
 
+
+        
 
    /* random view  */
    @media (max-width: 1516px) {
@@ -1205,32 +1210,32 @@
             
             .firsth1 {
                 font-size: 10vw;
-                margin-top: 20vw;
-                margin-left: 25vw;
+                margin-top: 30vw;
+                margin-left: 30vw;
                
             }
             .firsth2 {
                 font-size: 10vw;
                 margin-top: 35vw;
                 margin-bottom: -7vw;
-                margin-left: 30vw;
+                margin-left: 40vw;
 
             }
             .firstp {
                 font-size: 4vw;
                 max-width: 100%;
                 margin-top: 3vw;
-                margin-left:7vw;                
+                margin-left:30vw;                
                 white-space: nowrap;
             }
          
             
             .btn1 {
                 /* top: 700px; */
-                margin-left: 11vw;
+                margin-left: 55vw;
                 width: 100%;
                 justify-content: center;
-                margin-top:65vw;
+                margin-top:-100vw;
                 align-items: center;
             }
             .btn1 .button-4
@@ -1254,7 +1259,7 @@
            
             .content img 
             {
-                width: 6vw;
+                width: 7vw;
                 margin-bottom: -3px;
             }
     
@@ -1271,7 +1276,7 @@
             top: 51vw; /* Adjust according to the height of the navbar */
         }
         .left-content {
-            left: 4vw; /* Adjust to your desired left positioning */
+            left: 16vw; /* Adjust to your desired left positioning */
         }
         .right-content {
             right: 4vw; /* Adjust to your desired right positioning */
@@ -1288,11 +1293,185 @@
         /* New styles for certifications */
         .image-box {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(3,1fr);
             text-decoration: none;
             color: white;
-            gap: 3vw;
-            margin-left: 25vw;
+            gap: 1vw;
+            column-gap: 2vw;
+            row-gap: 5vw;
+            margin-left: 85vw;
+            margin-top: 20vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .layout-box {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 0px 9px 0px #30FFDA;
+            margin-bottom: 20px;
+            margin-left: 5px;
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-left: 4.5vw;
+        }
+        .layout-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            text-decoration: none;
+        }
+        .image-description {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .gif-1
+        {
+            display:none
+        }
+
+        .left-content .content, .right-content .content
+        {
+            margin-top: 10vw;
+        }
+     
+        } 
+        
+        
+           
+        /* random resizing  */
+       @media (max-width: 745px) {
+        body
+            {
+                overflow: hidden;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+       
+            .nav1 {
+                display: none;
+                flex-direction: column;
+                width: 100%; 
+               
+            }
+            .nav1.active {
+                display: flex;
+                font-size: 10px ;            
+            }
+            .toggle-button {
+                display: flex;
+            }
+            .nav1 li {
+                margin: 0px 0;
+            }
+           .nav1 li a {
+                margin: 0px 0;
+                font-size: 5vw;
+            }
+            
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+           
+            
+            .firsth1 {
+                font-size: 10vw;
+                margin-top: 30vw;
+                margin-left: 30vw;
+               
+            }
+            .firsth2 {
+                font-size: 10vw;
+                margin-top: 35vw;
+                margin-bottom: -7vw;
+                margin-left: 40vw;
+
+            }
+            .firstp {
+                font-size: 4vw;
+                max-width: 100%;
+                margin-top: 3vw;
+                margin-left:30vw;                
+                white-space: nowrap;
+            }
+         
+            
+            .btn1 {
+                /* top: 700px; */
+                margin-left: 55vw;
+                width: 100%;
+                justify-content: center;
+                margin-top:-100vw;
+                align-items: center;
+            }
+            .btn1 .button-4
+            {
+                font-size: 4vw;
+                padding: 3vw;
+            }
+            .left-content, .right-content {
+                position: static;
+                width: 100%;
+                text-align: center;
+            }
+    
+            .vertical-line {
+                display: none;
+            }
+            .email p
+            {
+                font-size: 3vw;
+            }
+           
+            .content img 
+            {
+                width: 7vw;
+                margin-bottom: -3px;
+            }
+    
+     
+        .college1 img, .college2 img, .college3 img {
+            width: 60px;
+            height: auto;
+            margin-left: 10vw;
+        }
+     
+        
+        .left-content, .right-content {
+            position: fixed;
+            top: 51vw; /* Adjust according to the height of the navbar */
+        }
+        .left-content {
+            left: 16vw; /* Adjust to your desired left positioning */
+        }
+        .right-content {
+            right: 4vw; /* Adjust to your desired right positioning */
+        }
+        .left-content .content, .right-content .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 5vw;
+         
+        }
+      
+        /* New styles for certifications */
+        .image-box {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            text-decoration: none;
+            color: white;
+            gap: 1vw;
+            column-gap: 2vw;
+            row-gap: 5vw;
+            margin-left: 85vw;
             margin-top: 20vw;
             align-items: center;
             justify-content: center;
@@ -1333,6 +1512,7 @@
         }
      
         }      
+         
          
 
         /* surface  */
@@ -1505,7 +1685,7 @@
         }      
          
 
-        /* ios 14 pro max */
+        /* ios 14pr0*/
         @media (max-width: 432px) {
             body
             {
@@ -1571,7 +1751,7 @@
                 margin-left: 3vw;
                 width: 100%;
                 justify-content: center;
-                margin-top:0vw;
+                margin-top:-390vw;
                 align-items: center;
             }
             .btn1 .button-4
@@ -1739,8 +1919,9 @@
                 margin-left: 3vw;
                 width: 100%;
                 justify-content: center;
-                margin-top: -1vw;
+                margin-top: -400vw;
                 align-items: center;
+                z-index: 10000;
             }
             .btn1 .button-4
             {
@@ -1842,6 +2023,176 @@
         }
      
         }      
+
+        
+         /* iphone 12*/
+         @media (max-width: 391px) {
+            body
+            {
+                overflow: hidden;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+       
+            .nav1 {
+                display: none;
+                flex-direction: column;
+                width: 100%; 
+               
+            }
+            .nav1.active {
+                display: flex;
+                font-size: 10px ;            
+            }
+            .toggle-button {
+                display: flex;
+            }
+            .nav1 li {
+                margin: 0px 0;
+            }
+           .nav1 li a {
+                margin: 0px 0;
+                font-size: 5vw;
+            }
+            
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+           
+            
+            .firsth1 {
+                font-size: 10vw;
+                margin-top: 20vw;
+                margin-left: 20vw;
+            }
+            .firsth2 {
+                font-size: 10vw;
+                margin-top: 35vw;
+                margin-bottom: -7vw;
+                margin-left: 25vw;
+
+            }
+            .firstp {
+                font-size: 4vw;
+                max-width: 100%;
+                margin-top: 3vw;
+                margin-left:7vw;
+                
+            }
+         
+            
+            .btn1 {
+                /* top: 700px; */
+                margin-left: 3vw;
+                width: 100%;
+                justify-content: center;
+                margin-top: -431vw;
+                align-items: center;
+                z-index: 10000;
+            }
+            .btn1 .button-4
+            {
+                font-size: 4vw;
+                padding: 3vw;
+            }
+            .left-content, .right-content {
+                position: static;
+                width: 100%;
+                text-align: center;
+            }
+    
+            .vertical-line {
+                display: none;
+            }
+            .email p
+            {
+                font-size: 3vw;
+            }
+           
+            .content img 
+            {
+                width: 7vw;
+                margin-bottom: -3px;
+            }
+    
+     
+        .college1 img, .college2 img, .college3 img {
+            width: 50px;
+            height: auto;
+            margin-left: -1vw;
+        }
+     
+        
+        .left-content, .right-content {
+            position: fixed;
+            top: 51vw; /* Adjust according to the height of the navbar */
+        }
+        .left-content {
+            left: 4vw; /* Adjust to your desired left positioning */
+        }
+        .right-content {
+            right: 4vw; /* Adjust to your desired right positioning */
+        }
+        .left-content .content, .right-content .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 5vw;
+         
+        }
+      
+        /* New styles for certifications */
+        .image-box {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            text-decoration: none;
+            color: white;
+            gap: 3vw;
+            margin-left: 19vw;
+            margin-top: 20vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .layout-box {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 0px 9px 0px #30FFDA;
+            margin-bottom: 20px;
+            margin-left: 5px;
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-left: 5vw;
+        }
+        .layout-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            text-decoration: none;
+        }
+        .image-description {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .gif-1
+        {
+            display:none
+        }
+
+        .left-content .content, .right-content .content
+        {
+            margin-top: 10vw;
+        }
+     
+        }  
+
         /* se */
              @media (max-width: 376px) {
                 body
@@ -1905,7 +2256,7 @@
                 margin-left: 3vw;
                 width: 100%;
                 justify-content: center;
-                margin-top: -20vw;
+                margin-top: -440vw;
                 align-items: center;
             }
             .btn1 .button-4
@@ -1929,7 +2280,7 @@
            
             .content img 
             {
-                width: 5vw;
+                width: 6vw;
                 margin-bottom: -3px;
             }
     
@@ -2072,7 +2423,7 @@
                 margin-left: 3vw;
                 width: 100%;
                 justify-content: center;
-                margin-top: -22vw;
+                margin-top: -460vw;
                 align-items: center;
             }
             .btn1 .button-4
@@ -2238,7 +2589,7 @@
                 margin-left: 3vw;
                 width: 100%;
                 justify-content: center;
-                margin-top: -45vw;
+                margin-top: -520vw;
                 align-items: center;
             }
             .btn1 .button-4
@@ -2262,7 +2613,7 @@
            
             .content img 
             {
-                width: 5vw;
+                width: 6vw;
                 margin-bottom: -3px;
             }
     
@@ -2289,7 +2640,7 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            gap: 1vw;
+            gap: 5vw;
          
         }
       
