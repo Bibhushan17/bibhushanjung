@@ -3,782 +3,518 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bibhushan Jung Sijapati — Designer</title>
+<title>Bibhushan Jung Sijapati — Designer, Kathmandu</title>
+<meta name="description" content="Graphic Designer based in Kathmandu, Nepal. Specializing in social media design, brand visuals, product photography & poster design since 2019.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Syne:wght@400;500;600;700;800&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#080807;
+  --bg2:#0e0e0c;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --gold-dim:#7a6330;
+  --text:#ede9e0;
+  --muted:#7a766c;
+  --border:#1e1e1b;
+  --border2:#2a2a26;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overflow-x:hidden;cursor:none;}
 
-  :root {
-    --bg: #0a0a09;
-    --surface: #111110;
-    --accent: #d4a853;
-    --accent-dim: #9a7636;
-    --text: #f0ede6;
-    --text-muted: #8a8578;
-    --border: #222220;
-    --red: #c94a2e;
-  }
+#cur{position:fixed;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+#cur-r{position:fixed;width:36px;height:36px;border:1px solid rgba(201,168,76,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+body:has(a:hover) #cur-r,body:has(button:hover) #cur-r{width:56px;height:56px;border-color:var(--gold);}
 
-  html { scroll-behavior: smooth; }
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");pointer-events:none;z-index:998;opacity:.5;}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    overflow-x: hidden;
-    cursor: none;
-  }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:24px 60px;display:flex;align-items:center;justify-content:space-between;transition:background .5s,border-color .5s;border-bottom:1px solid transparent;}
+nav.stuck{background:rgba(8,8,7,.92);backdrop-filter:blur(20px);border-color:var(--border);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:.5px;}
+.nav-logo sup{color:var(--gold);font-size:11px;vertical-align:super;margin-left:2px;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;transition:color .3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:20px;}
+.avail-dot{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.avail-dot::before{content:'';width:7px;height:7px;border-radius:50%;background:#4caf72;animation:pg 2s infinite;}
+@keyframes pg{0%,100%{box-shadow:0 0 6px #4caf7280;}50%{box-shadow:0 0 14px #4caf72cc;}}
+.btn-hire{padding:10px 26px;background:var(--gold);color:var(--bg);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;text-decoration:none;transition:background .3s;}
+.btn-hire:hover{background:var(--gold2);}
 
-  /* Custom Cursor */
-  .cursor {
-    position: fixed;
-    width: 10px; height: 10px;
-    background: var(--accent);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.15s ease, width 0.2s, height 0.2s;
-    transform: translate(-50%, -50%);
-  }
-  .cursor-ring {
-    position: fixed;
-    width: 38px; height: 38px;
-    border: 1px solid rgba(212,168,83,0.4);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transition: transform 0.35s cubic-bezier(.16,1,.3,1), width 0.3s, height 0.3s, border-color 0.3s;
-    transform: translate(-50%, -50%);
-  }
-  body:has(a:hover) .cursor-ring,
-  body:has(button:hover) .cursor-ring { width: 60px; height: 60px; border-color: var(--accent); }
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 80px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;opacity:.2;filter:saturate(.55);}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-ov1{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 65%,rgba(8,8,7,.45) 0%,var(--bg) 68%);}
+.hero-ov2{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,transparent 60%);}
 
-  /* Nav */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 28px 56px;
-    display: flex; align-items: center; justify-content: space-between;
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.4s, background 0.4s;
-  }
-  nav.scrolled { border-color: var(--border); background: rgba(10,10,9,0.85); }
-  .nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 3px;
-    color: var(--text);
-    text-decoration: none;
-  }
-  .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 40px; list-style: none; }
-  .nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover { color: var(--accent); }
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;align-items:flex-end;gap:40px;}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:30px;opacity:0;animation:up .8s .1s forwards;}
+.htl{width:28px;height:1px;background:var(--gold);}
+h1.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(72px,8.5vw,138px);font-weight:900;line-height:.9;letter-spacing:-2px;margin-bottom:36px;opacity:0;animation:up .9s .25s forwards;}
+h1.hero-h1 .li{font-style:italic;color:var(--gold);display:block;}
+h1.hero-h1 .lo{-webkit-text-stroke:1.5px rgba(237,233,224,.6);color:transparent;display:block;}
+.hero-sub{max-width:420px;font-family:'Crimson Pro',serif;font-size:20px;line-height:1.75;color:var(--muted);margin-bottom:44px;opacity:0;animation:up .9s .4s forwards;}
+.hero-sub strong{color:var(--text);font-style:italic;font-weight:300;}
+.hero-cta{display:flex;gap:16px;align-items:center;opacity:0;animation:up .9s .55s forwards;flex-wrap:wrap;}
+.btn-p{padding:15px 40px;background:var(--gold);color:var(--bg);text-decoration:none;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;transition:background .3s,transform .2s;display:inline-block;}
+.btn-p:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-g{padding:15px 40px;border:1px solid var(--border2);color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;transition:border-color .3s,color .3s;}
+.btn-g:hover{border-color:var(--gold);color:var(--gold);}
 
-  /* Hero */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-left {
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 0 56px 80px;
-    position: relative; z-index: 2;
-  }
-  .hero-tag {
-    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 28px;
-    display: flex; align-items: center; gap: 12px;
-    opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
-  }
-  .hero-tag::before {
-    content: ''; width: 32px; height: 1px; background: var(--accent);
-  }
-  .hero-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(64px, 7vw, 108px);
-    font-weight: 300;
-    line-height: 0.93;
-    margin-bottom: 32px;
-    opacity: 0; animation: fadeUp 0.9s 0.35s forwards;
-  }
-  .hero-name em { font-style: italic; color: var(--accent); }
-  .hero-desc {
-    font-size: 15px; line-height: 1.75; color: var(--text-muted);
-    max-width: 360px; margin-bottom: 48px;
-    opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
-  }
-  .hero-cta {
-    display: flex; gap: 20px; align-items: center;
-    opacity: 0; animation: fadeUp 0.9s 0.65s forwards;
-  }
-  .btn-primary {
-    padding: 14px 36px;
-    background: var(--accent);
-    color: var(--bg);
-    text-decoration: none;
-    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 500;
-    transition: background 0.3s, transform 0.2s;
-  }
-  .btn-primary:hover { background: #e8bc67; transform: translateY(-2px); }
-  .btn-outline {
-    padding: 14px 36px;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
-    transition: border-color 0.3s, color 0.3s;
-  }
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.hero-rc{display:flex;flex-direction:column;align-items:flex-end;gap:28px;opacity:0;animation:fi 1.2s .4s forwards;}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.hs{background:rgba(14,14,12,.75);backdrop-filter:blur(12px);border:1px solid var(--border2);padding:22px 28px;text-align:center;}
+.hs-n{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;color:var(--gold);line-height:1;}
+.hs-l{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+.hero-scroll{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--muted);font-size:9px;letter-spacing:3px;text-transform:uppercase;}
+.st{width:1px;height:56px;background:linear-gradient(var(--gold),transparent);animation:sa 2s infinite;}
+@keyframes sa{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
 
-  .hero-right {
-    position: relative; overflow: hidden;
-    opacity: 0; animation: fadeIn 1.2s 0.3s forwards;
-  }
-  .hero-img-stack {
-    position: absolute; inset: 0;
-    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-    gap: 3px;
-  }
-  .hero-img-stack img {
-    width: 100%; height: 100%; object-fit: cover;
-    filter: saturate(0.8) brightness(0.75);
-    transition: filter 0.5s;
-  }
-  .hero-img-stack img:hover { filter: saturate(1) brightness(0.95); }
-  .hero-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to right, var(--bg) 0%, transparent 30%);
-    z-index: 1; pointer-events: none;
-  }
+/* MARQUEE */
+.mq-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:17px 0;background:var(--bg2);}
+.mq-inner{display:flex;animation:mq 22s linear infinite;white-space:nowrap;}
+.mq-inner:hover{animation-play-state:paused;}
+.mq-item{display:inline-flex;align-items:center;gap:36px;padding:0 36px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-weight:600;flex-shrink:0;}
+.mq-item span{color:var(--gold);}
+@keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-  .hero-scroll {
-    position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center; gap: 10px;
-    color: var(--text-muted); font-size: 10px; letter-spacing: 3px;
-    text-transform: uppercase; z-index: 10;
-    opacity: 0; animation: fadeUp 1s 1.2s forwards;
-  }
-  .scroll-line {
-    width: 1px; height: 50px; background: linear-gradient(var(--accent), transparent);
-    animation: scrollPulse 2s 1.5s infinite;
-  }
+/* WORK */
+.work{padding:100px 60px;}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;}
+.se{font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block;}
+.st2{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,70px);font-weight:900;line-height:1;letter-spacing:-1px;}
+.st2 em{font-style:italic;color:var(--gold-dim);}
+.sl{color:var(--muted);text-decoration:none;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--border2);padding-bottom:4px;transition:color .3s,border-color .3s;}
+.sl:hover{color:var(--gold);border-color:var(--gold);}
 
-  /* Stats bar */
-  .stats-bar {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    overflow: hidden;
-  }
-  .stat {
-    padding: 36px 48px;
-    border-right: 1px solid var(--border);
-    opacity: 0; transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s;
-  }
-  .stat:last-child { border-right: none; }
-  .stat.visible { opacity: 1; transform: translateY(0); }
-  .stat-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 52px; color: var(--accent); line-height: 1;
-    margin-bottom: 6px;
-  }
-  .stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+.wb{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;}
+.wc{position:relative;overflow:hidden;background:var(--bg2);cursor:none;opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;}
+.wc.vis{opacity:1;transform:translateY(0);}
+.wc:nth-child(1){grid-column:span 7;min-height:500px;}
+.wc:nth-child(2){grid-column:span 5;min-height:500px;}
+.wc:nth-child(3){grid-column:span 4;min-height:320px;}
+.wc:nth-child(4){grid-column:span 4;min-height:320px;}
+.wc:nth-child(5){grid-column:span 4;min-height:320px;}
+.wc img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1),filter .5s;filter:brightness(.72) saturate(.65);}
+.wc:hover img{transform:scale(1.07);filter:brightness(.95) saturate(1);}
+.wc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,transparent 55%);}
+.wc-body{position:absolute;bottom:0;left:0;right:0;padding:28px 30px;transform:translateY(10px);opacity:0;transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .45s;}
+.wc:hover .wc-body{transform:translateY(0);opacity:1;}
+.wc-cat{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:7px;}
+.wc-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;margin-bottom:8px;}
+.wc-desc{font-family:'Crimson Pro',serif;font-size:14px;color:rgba(237,233,224,.6);line-height:1.6;}
+.wc-btn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;text-decoration:none;border-bottom:1px solid var(--gold-dim);padding-bottom:2px;transition:gap .3s;}
+.wc-btn:hover{gap:14px;}
+.wc-num{position:absolute;top:20px;left:24px;font-family:'Playfair Display',serif;font-size:13px;color:rgba(201,168,76,.5);font-style:italic;}
+.wc-badge{position:absolute;top:20px;right:20px;background:var(--gold);color:var(--bg);font-size:8px;letter-spacing:2px;text-transform:uppercase;padding:5px 10px;font-weight:700;opacity:0;transition:opacity .3s;}
+.wc:hover .wc-badge{opacity:1;}
 
-  /* Section base */
-  section { padding: 120px 56px; }
-  .section-header {
-    display: flex; align-items: flex-start; justify-content: space-between;
-    margin-bottom: 72px;
-  }
-  .section-tag {
-    font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 16px; display: block;
-  }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(40px, 5vw, 72px);
-    font-weight: 300; line-height: 1.05;
-  }
-  .section-title em { font-style: italic; color: var(--accent-dim); }
+/* CRED STRIP */
+.cred{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:52px 60px;}
+.cred-g{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+.ci2{padding:32px 28px;border-right:1px solid var(--border);text-align:center;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s;}
+.ci2:last-child{border-right:none;}
+.ci2.vis{opacity:1;transform:translateY(0);}
+.ci2-n{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;}
+.ci2-l{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);}
+.ci2-s{font-size:12px;color:var(--muted);margin-top:4px;font-family:'Crimson Pro',serif;font-style:italic;}
 
-  /* About */
-  .about { background: var(--surface); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1.4fr;
-    gap: 80px; align-items: start;
-  }
-  .about-text p {
-    font-size: 17px; line-height: 1.9; color: var(--text-muted);
-    margin-bottom: 24px;
-  }
-  .about-text p strong { color: var(--text); font-weight: 400; }
-  .skills-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 2px; margin-top: 40px;
-  }
-  .skill-item {
-    background: var(--bg); padding: 20px 24px;
-    border-left: 2px solid transparent;
-    transition: border-color 0.3s;
-  }
-  .skill-item:hover { border-color: var(--accent); }
-  .skill-name { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
-  .skill-bar { height: 2px; background: var(--border); position: relative; overflow: hidden; }
-  .skill-fill { height: 100%; background: var(--accent); width: 0; transition: width 1.2s cubic-bezier(.16,1,.3,1); }
-  .about-visual {
-    position: relative;
-  }
-  .about-img-main {
-    width: 100%; aspect-ratio: 3/4; object-fit: cover;
-    filter: saturate(0.7);
-  }
-  .about-img-accent {
-    position: absolute; bottom: -30px; right: -30px;
-    width: 45%; aspect-ratio: 1;
-    object-fit: cover;
-    border: 4px solid var(--surface);
-    filter: saturate(0.6);
-  }
-  .about-badge {
-    position: absolute; top: 32px; left: -20px;
-    background: var(--accent); color: var(--bg);
-    padding: 12px 20px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 500;
-  }
+/* ABOUT */
+.about{padding:100px 60px;}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;}
+.at{font-family:'Crimson Pro',serif;font-size:20px;line-height:1.85;color:var(--muted);margin-bottom:28px;}
+.at strong{color:var(--text);font-weight:400;font-style:italic;}
+.aq{border-left:2px solid var(--gold);padding:20px 28px;margin:36px 0;background:var(--bg2);}
+.aq p{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;line-height:1.5;color:var(--text);}
+.tools-row{display:flex;flex-wrap:wrap;gap:9px;margin:28px 0;}
+.tc{padding:8px 18px;border:1px solid var(--border2);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:border-color .3s,color .3s;}
+.tc:hover{border-color:var(--gold);color:var(--gold);}
+.av{position:relative;padding-top:40px;}
+.aim{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.7);}
+.aif{position:absolute;bottom:-40px;right:-24px;width:55%;aspect-ratio:1;object-fit:cover;border:5px solid var(--bg);filter:saturate(.55);}
+.ab{position:absolute;top:0;left:-20px;background:var(--gold);color:var(--bg);padding:14px 20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);}
 
-  /* Work */
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: 3px;
-  }
-  .work-card {
-    position: relative; overflow: hidden;
-    background: var(--surface);
-    cursor: none;
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.7s, transform 0.7s;
-  }
-  .work-card.visible { opacity: 1; transform: translateY(0); }
-  .work-card:nth-child(1) { grid-column: span 7; grid-row: span 2; }
-  .work-card:nth-child(2) { grid-column: span 5; }
-  .work-card:nth-child(3) { grid-column: span 5; }
-  .work-card:nth-child(4) { grid-column: span 4; }
-  .work-card:nth-child(5) { grid-column: span 4; }
-  .work-card:nth-child(6) { grid-column: span 4; }
-  .work-card img {
-    width: 100%; height: 100%; object-fit: cover;
-    min-height: 260px;
-    display: block;
-    filter: brightness(0.85) saturate(0.8);
-    transition: transform 0.7s cubic-bezier(.16,1,.3,1), filter 0.5s;
-  }
-  .work-card:hover img { transform: scale(1.05); filter: brightness(1) saturate(1); }
-  .work-info {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    padding: 24px 28px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.85));
-    transform: translateY(10px); opacity: 0;
-    transition: transform 0.4s, opacity 0.4s;
-  }
-  .work-card:hover .work-info { transform: translateY(0); opacity: 1; }
-  .work-cat { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
-  .work-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; }
-  .work-arrow {
-    position: absolute; top: 24px; right: 24px;
-    width: 40px; height: 40px; background: var(--accent);
-    display: flex; align-items: center; justify-content: center;
-    transform: translate(10px, -10px) rotate(-45deg); opacity: 0;
-    transition: transform 0.4s, opacity 0.4s;
-  }
-  .work-card:hover .work-arrow { transform: translate(0,0) rotate(-45deg); opacity: 1; }
-  .work-arrow svg { width: 16px; height: 16px; transform: rotate(45deg); }
+/* EXP */
+.exp-s{padding:100px 60px;background:var(--bg2);}
+.exp-l{max-width:1000px;}
+.exp-i{display:grid;grid-template-columns:180px 1fr 120px;gap:40px;align-items:start;padding:36px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateX(-24px);transition:opacity .7s,transform .7s;}
+.exp-i.vis{opacity:1;transform:translateX(0);}
+.exp-co{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding-top:5px;}
+.exp-ro{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:8px;}
+.exp-de{font-size:14px;color:var(--muted);line-height:1.7;font-family:'Crimson Pro',serif;}
+.exp-yr{font-size:10px;letter-spacing:2px;color:var(--gold);text-align:right;padding-top:5px;}
 
-  /* Services */
-  .services { background: var(--surface); }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-  .service-card {
-    background: var(--bg); padding: 48px 40px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s, background 0.3s;
-    opacity: 0; transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s, border-color 0.3s, background 0.3s;
-  }
-  .service-card.visible { opacity: 1; transform: translateY(0); }
-  .service-card:hover { border-color: var(--accent); background: #111110; }
-  .service-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 64px; color: var(--border); line-height: 1;
-    margin-bottom: 20px; transition: color 0.3s;
-  }
-  .service-card:hover .service-num { color: var(--accent-dim); }
-  .service-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; margin-bottom: 16px; }
-  .service-desc { font-size: 14px; line-height: 1.8; color: var(--text-muted); }
-  .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-  .tag {
-    padding: 5px 12px; border: 1px solid var(--border);
-    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
-    color: var(--text-muted); transition: border-color 0.3s, color 0.3s;
-  }
-  .service-card:hover .tag { border-color: var(--accent-dim); color: var(--accent); }
+/* SERVICES */
+.svc-s{padding:100px 60px;}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4px;}
+.sv{background:var(--bg2);padding:52px 44px;border-top:3px solid transparent;opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s,border-color .3s,background .3s;}
+.sv.vis{opacity:1;transform:translateY(0);}
+.sv:hover{border-color:var(--gold);background:#111110;}
+.sv-n{font-family:'Playfair Display',serif;font-size:68px;font-weight:900;color:var(--border2);line-height:1;margin-bottom:20px;transition:color .3s;}
+.sv:hover .sv-n{color:var(--gold-dim);}
+.sv-t{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:14px;}
+.sv-d{font-family:'Crimson Pro',serif;font-size:17px;color:var(--muted);line-height:1.75;margin-bottom:24px;}
+.sv-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.sv-tag{padding:5px 11px;border:1px solid var(--border);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:all .3s;}
+.sv:hover .sv-tag{border-color:var(--gold-dim);color:var(--gold);}
 
-  /* Experience */
-  .exp-list { display: flex; flex-direction: column; gap: 0; max-width: 900px; }
-  .exp-item {
-    display: grid; grid-template-columns: 200px 1fr auto;
-    align-items: start; gap: 48px;
-    padding: 40px 0;
-    border-bottom: 1px solid var(--border);
-    opacity: 0; transform: translateX(-20px);
-    transition: opacity 0.6s, transform 0.6s;
-  }
-  .exp-item.visible { opacity: 1; transform: translateX(0); }
-  .exp-company { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); padding-top: 4px; }
-  .exp-role { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; margin-bottom: 10px; }
-  .exp-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
-  .exp-year { font-size: 11px; letter-spacing: 2px; color: var(--accent); padding-top: 4px; }
+/* ARTICLES TEASER */
+.art-t{padding:100px 60px;background:var(--bg2);border-top:1px solid var(--border);}
+.art-g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:60px;}
+.ac{background:var(--bg);padding:36px 32px;border-bottom:2px solid transparent;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s,border-color .3s;}
+.ac.vis{opacity:1;transform:translateY(0);}
+.ac:hover{border-color:var(--gold);}
+.ac-tag{display:inline-block;padding:4px 10px;background:var(--bg2);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.ac-date{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.ac-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1.2;margin-bottom:12px;}
+.ac-exc{font-family:'Crimson Pro',serif;font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:18px;}
+.ac-link{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:gap .3s;}
+.ac-link:hover{gap:12px;}
 
-  /* Contact */
-  .contact {
-    background: var(--bg);
-    text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .contact::before {
-    content: 'HIRE ME';
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(100px, 18vw, 260px);
-    color: rgba(255,255,255,0.015);
-    white-space: nowrap;
-    pointer-events: none;
-  }
-  .contact-inner { position: relative; z-index: 2; }
-  .contact-pre {
-    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 24px; display: block;
-  }
-  .contact-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 7vw, 96px);
-    font-weight: 300; line-height: 1.05; margin-bottom: 20px;
-  }
-  .contact-title em { font-style: italic; }
-  .contact-sub { font-size: 16px; color: var(--text-muted); margin-bottom: 56px; }
-  .contact-email {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(22px, 3vw, 40px);
-    color: var(--accent); text-decoration: none;
-    border-bottom: 1px solid var(--accent-dim);
-    padding-bottom: 4px;
-    transition: color 0.3s;
-    display: inline-block; margin-bottom: 56px;
-  }
-  .contact-email:hover { color: #e8bc67; }
-  .social-links { display: flex; gap: 32px; justify-content: center; margin-top: 20px; }
-  .social-link {
-    color: var(--text-muted); text-decoration: none;
-    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-    transition: color 0.3s;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .social-link:hover { color: var(--accent); }
-  .social-link::before { content: '↗'; font-size: 14px; }
+/* CONTACT */
+.contact{padding:120px 60px;position:relative;overflow:hidden;text-align:center;}
+.cg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-size:clamp(80px,14vw,220px);font-weight:900;color:rgba(255,255,255,.018);white-space:nowrap;pointer-events:none;letter-spacing:-4px;}
+.ci3{position:relative;z-index:2;}
+.ce{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:block;}
+.ch{font-family:'Playfair Display',serif;font-size:clamp(46px,7vw,96px);font-weight:900;line-height:.95;letter-spacing:-2px;margin-bottom:28px;}
+.ch em{font-style:italic;color:var(--gold-dim);}
+.cs{font-family:'Crimson Pro',serif;font-size:19px;color:var(--muted);margin-bottom:56px;}
+.cem{font-family:'Playfair Display',serif;font-size:clamp(18px,3.5vw,42px);color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim);padding-bottom:4px;font-style:italic;display:inline-block;margin-bottom:56px;transition:color .3s,border-color .3s;}
+.cem:hover{color:var(--gold2);border-color:var(--gold2);}
+.cin{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:56px;max-width:700px;margin-left:auto;margin-right:auto;}
+.cin-i{background:var(--bg2);padding:22px;text-align:left;}
+.cin-l{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.cin-v{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;}
+.srow{display:flex;gap:28px;justify-content:center;}
+.sa{color:var(--muted);text-decoration:none;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .3s,border-color .3s;display:flex;align-items:center;gap:5px;}
+.sa::before{content:'↗';}
+.sa:hover{color:var(--gold);border-color:var(--gold);}
 
-  /* Footer */
-  footer {
-    padding: 32px 56px;
-    border-top: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    font-size: 12px; color: var(--text-muted);
-  }
+footer{padding:28px 60px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);}
+footer a{color:var(--muted);text-decoration:none;transition:color .3s;}
+footer a:hover{color:var(--gold);}
 
-  /* Animations */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  @keyframes scrollPulse {
-    0%, 100% { opacity: 1; transform: scaleY(1); }
-    50% { opacity: 0.3; transform: scaleY(0.5); }
-  }
+/* ANIMS */
+@keyframes up{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fi{from{opacity:0;}to{opacity:1;}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s;}
+.reveal.vis{opacity:1;transform:translateY(0);}
 
-  /* Noise grain overlay */
-  body::after {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 1000;
-    opacity: 0.4;
-  }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    nav { padding: 24px 28px; }
-    .nav-links { display: none; }
-    section { padding: 80px 28px; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-right { display: none; }
-    .hero-left { padding: 0 28px 72px; padding-top: 120px; }
-    .stats-bar { grid-template-columns: 1fr 1fr; }
-    .about-grid { grid-template-columns: 1fr; }
-    .about-visual { display: none; }
-    .work-card:nth-child(n) { grid-column: span 12; }
-    .services-grid { grid-template-columns: 1fr; }
-    .exp-item { grid-template-columns: 1fr; gap: 8px; }
-    footer { flex-direction: column; gap: 12px; text-align: center; }
-  }
+@media(max-width:960px){
+  nav{padding:20px 24px;}
+  .nav-links,.avail-dot{display:none;}
+  .hero,.work,.about,.exp-s,.svc-s,.art-t,.contact{padding-left:24px;padding-right:24px;}
+  .hero{padding-bottom:60px;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-rc{display:none;}
+  .ag{grid-template-columns:1fr;}
+  .av{display:none;}
+  .sg{grid-template-columns:1fr;}
+  .art-g{grid-template-columns:1fr;}
+  .cred-g{grid-template-columns:1fr 1fr;}
+  .wc:nth-child(n){grid-column:span 12;}
+  .exp-i{grid-template-columns:1fr;gap:8px;}
+  .cin{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:10px;text-align:center;}
+}
 </style>
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+<div id="cur"></div>
+<div id="cur-r"></div>
 
-<nav id="navbar">
-  <a href="#" class="nav-logo">BJS<span>.</span></a>
+<nav id="nav">
+  <a href="#" class="nav-logo">Bibhushan<sup>®</sup></a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
-   <li><a href="#article">Articles</a></li>
+    <li><a href="articles.html">Articles</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="btn-primary" style="padding:12px 28px;font-size:11px">Hire Me</a>
+  <div class="nav-right">
+    <div class="avail-dot">Available Now</div>
+    <a href="#contact" class="btn-hire">Hire Me</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-left">
-    <div class="hero-tag">Available for Freelance & Fulltime</div>
-    <h1 class="hero-name">
-      Bibhushan<br>
-      <em>Jung</em><br>
-      Sijapati
-    </h1>
-    <p class="hero-desc">
-      Graphic designer crafting purposeful, visually engaging work since 2019. Based in Kathmandu, Nepal — designing for the world.
-    </p>
-    <div class="hero-cta">
-      <a href="#work" class="btn-primary">View Work</a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
-    </div>
+  <div class="hero-bg">
+    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ffa9f0225915651.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg" alt="">
+    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/faa6c5228116147.Y3JvcCwyODAwLDIxOTAsMCww.jpg" alt="">
+    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/aa9577225097981.Y3JvcCwxMDgwLDg0NCwwLDUzNw.png" alt="">
+    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d3c9be226773353.683496c79ff00.jpg" alt="">
+    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8d8180225079721.Y3JvcCwxMDgwLDg0NCwwLDA.png" alt="">
+    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c3683d225098497.Y3JvcCwxMDgwLDg0NCwwLDExNw.png" alt="">
   </div>
-  <div class="hero-right">
-    <div class="hero-img-stack">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ffa9f0225915651.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg" alt="">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/faa6c5228116147.Y3JvcCwyODAwLDIxOTAsMCww.jpg" alt="">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/aa9577225097981.Y3JvcCwxMDgwLDg0NCwwLDUzNw.png" alt="">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d3c9be226773353.683496c79ff00.jpg" alt="">
+  <div class="hero-ov1"></div>
+  <div class="hero-ov2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><div class="htl"></div>Graphic Designer · Kathmandu, Nepal</div>
+      <h1 class="hero-h1">
+        Bibhushan
+        <span class="li">Jung</span>
+        <span class="lo">Sijapati</span>
+      </h1>
+      <p class="hero-sub">Crafting <strong>purposeful, unforgettable visual work</strong> since 2019 — for brands, businesses &amp; beyond.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-p">View Selected Work</a>
+        <a href="#contact" class="btn-g">Start a Project →</a>
+      </div>
     </div>
-    <div class="hero-overlay"></div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
+    <div class="hero-rc">
+      <div class="hero-stats">
+        <div class="hs"><div class="hs-n">6+</div><div class="hs-l">Years Active</div></div>
+        <div class="hs"><div class="hs-n">50+</div><div class="hs-l">Projects Done</div></div>
+        <div class="hs"><div class="hs-n">107</div><div class="hs-l">Appreciations</div></div>
+        <div class="hs"><div class="hs-n">5</div><div class="hs-l">Orgs Served</div></div>
+      </div>
+      <div class="hero-scroll"><div class="st"></div><span>Scroll</span></div>
+    </div>
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat">
-    <div class="stat-num">6+</div>
-    <div class="stat-label">Years Experience</div>
-  </div>
-  <div class="stat" style="transition-delay:0.1s">
-    <div class="stat-num">50+</div>
-    <div class="stat-label">Projects Completed</div>
-  </div>
-  <div class="stat" style="transition-delay:0.2s">
-    <div class="stat-num">107</div>
-    <div class="stat-label">Appreciations</div>
-  </div>
-  <div class="stat" style="transition-delay:0.3s">
-    <div class="stat-num">5+</div>
-    <div class="stat-label">Companies Served</div>
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-inner">
+    <div class="mq-item">Social Media Design<span>✦</span></div>
+    <div class="mq-item">Product Visuals<span>✦</span></div>
+    <div class="mq-item">Poster Design<span>✦</span></div>
+    <div class="mq-item">Brand Identity<span>✦</span></div>
+    <div class="mq-item">Photo Manipulation<span>✦</span></div>
+    <div class="mq-item">YouTube Thumbnails<span>✦</span></div>
+    <div class="mq-item">Adobe Photoshop Expert<span>✦</span></div>
+    <div class="mq-item">Available for Freelance<span>✦</span></div>
+    <div class="mq-item">Design Educator<span>✦</span></div>
+    <div class="mq-item">Social Media Design<span>✦</span></div>
+    <div class="mq-item">Product Visuals<span>✦</span></div>
+    <div class="mq-item">Poster Design<span>✦</span></div>
+    <div class="mq-item">Brand Identity<span>✦</span></div>
+    <div class="mq-item">Photo Manipulation<span>✦</span></div>
+    <div class="mq-item">YouTube Thumbnails<span>✦</span></div>
+    <div class="mq-item">Adobe Photoshop Expert<span>✦</span></div>
+    <div class="mq-item">Available for Freelance<span>✦</span></div>
+    <div class="mq-item">Design Educator<span>✦</span></div>
   </div>
 </div>
 
 <!-- WORK -->
-<section id="work" style="padding-top:120px;padding-bottom:120px;padding-left:56px;padding-right:56px;">
-  <div class="section-header">
+<section class="work" id="work">
+  <div class="sh reveal">
     <div>
-      <span class="section-tag">Selected Work</span>
-      <h2 class="section-title">Creative<br><em>Projects</em></h2>
+      <span class="se">Selected Work · 2021–2025</span>
+      <h2 class="st2">Featured<br><em>Projects</em></h2>
     </div>
-    <a href="https://www.behance.net/bibhushsijapat" target="_blank" class="btn-outline" style="margin-top:auto">View All on Behance ↗</a>
+    <a href="https://www.behance.net/bibhushsijapat" target="_blank" class="sl">All Projects on Behance ↗</a>
   </div>
-  <div class="work-grid">
-    <div class="work-card">
-      <img src="Bottled.jpg" alt="Copper Bottle">
-      <div class="work-info">
-        <div class="work-cat">Product Design</div>
-        <div class="work-title">Copper Bottle — Social Media</div>
+  <div class="wb">
+    <div class="wc">
+      <img src="https://bibhushanjung.com.np/Bottled.jpg" alt="Copper Bottle">
+      <div class="wc-ov"></div>
+      <div class="wc-num">01</div><div class="wc-badge">Featured</div>
+      <div class="wc-body">
+        <div class="wc-cat">Product Design · Social Media</div>
+        <div class="wc-title">Copper Bottle — Product Visual</div>
+        <div class="wc-desc">High-impact product composition for social media advertising — earns attention and builds brand trust instantly.</div>
+        <a href="https://www.behance.net/gallery/225915651/Copper-Bottle-Product-Social-Media-Design" target="_blank" class="wc-btn">View on Behance →</a>
       </div>
-      <div class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a09" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
     </div>
-    <div class="work-card">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c3683d225098497.Y3JvcCwxMDgwLDg0NCwwLDExNw.png" alt="Mother's Day">
-      <div class="work-info">
-        <div class="work-cat">Social Media</div>
-        <div class="work-title">Mother's Day Campaign</div>
-      </div>
-      <div class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a09" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-    <div class="work-card">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/aa9577225097981.Y3JvcCwxMDgwLDg0NCwwLDUzNw.png" alt="Kathmandu Valley">
-      <div class="work-info">
-        <div class="work-cat">Illustration & Culture</div>
-        <div class="work-title">Kathmandu Valley Interpretation</div>
-      </div>
-      <div class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a09" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-    <div class="work-card">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8d8180225079721.Y3JvcCwxMDgwLDg0NCwwLDA.png" alt="CG Campaign">
-      <div class="work-info">
-        <div class="work-cat">Brand Campaign</div>
-        <div class="work-title">CG Social Media Campaign</div>
-      </div>
-      <div class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a09" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-    </div>
-    <div class="work-card">
+    <div class="wc">
       <img src="https://mir-s3-cdn-cf.behance.net/projects/404/faa6c5228116147.Y3JvcCwyODAwLDIxOTAsMCww.jpg" alt="Music Poster">
-      <div class="work-info">
-        <div class="work-cat">Poster Design</div>
-        <div class="work-title">Classical Music — Minimal Poster</div>
+      <div class="wc-ov"></div>
+      <div class="wc-num">02</div><div class="wc-badge">Minimal</div>
+      <div class="wc-body">
+        <div class="wc-cat">Poster Design</div>
+        <div class="wc-title">Classical Music — Minimal Poster</div>
+        <div class="wc-desc">Clean typographic poster — designed to communicate through restraint and elegance.</div>
+        <a href="https://www.behance.net/gallery/228116147/Classical-Music-Poster-Design-Simple-and-Minimal" target="_blank" class="wc-btn">View on Behance →</a>
       </div>
-      <div class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a09" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
     </div>
-    <div class="work-card">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d3c9be226773353.683496c79ff00.jpg" alt="Earbuds">
-      <div class="work-info">
-        <div class="work-cat">Product Visual</div>
-        <div class="work-title">Base Earbuds — Gaming & Music</div>
+    <div class="wc">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/aa9577225097981.Y3JvcCwxMDgwLDg0NCwwLDUzNw.png" alt="Kathmandu Valley">
+      <div class="wc-ov"></div>
+      <div class="wc-num">03</div><div class="wc-badge">Cultural</div>
+      <div class="wc-body">
+        <div class="wc-cat">Illustration & Culture</div>
+        <div class="wc-title">Kathmandu Valley Interpretation</div>
+        <div class="wc-desc">Artistic interpretation celebrating the heritage and spirit of the Kathmandu Valley.</div>
+        <a href="https://www.behance.net/gallery/225097981/Kathmandu-Valley-Interpretation" target="_blank" class="wc-btn">View on Behance →</a>
       </div>
-      <div class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a09" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+    <div class="wc">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8d8180225079721.Y3JvcCwxMDgwLDg0NCwwLDA.png" alt="CG Campaign">
+      <div class="wc-ov"></div>
+      <div class="wc-num">04</div><div class="wc-badge">Brand</div>
+      <div class="wc-body">
+        <div class="wc-cat">Social Media Campaign</div>
+        <div class="wc-title">CG — Social Media Campaign</div>
+        <div class="wc-desc">Full-scale social campaign with consistent visual language across multiple touchpoints.</div>
+        <a href="https://www.behance.net/gallery/225079721/CG-Social-Media-Campaign" target="_blank" class="wc-btn">View on Behance →</a>
+      </div>
+    </div>
+    <div class="wc">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/d3c9be226773353.683496c79ff00.jpg" alt="Earbuds">
+      <div class="wc-ov"></div>
+      <div class="wc-num">05</div><div class="wc-badge">Product</div>
+      <div class="wc-body">
+        <div class="wc-cat">Product Visual</div>
+        <div class="wc-title">Base Earbuds — Gaming & Music</div>
+        <div class="wc-desc">Dark, dramatic product visuals crafted for a gaming-focused audience.</div>
+        <a href="https://www.behance.net/gallery/226773353/Base-Earbuds-Made-for-Gaming-and-Music-Lovers" target="_blank" class="wc-btn">View on Behance →</a>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- CRED STRIP -->
+<div class="cred">
+  <div class="cred-g">
+    <div class="ci2"><div class="ci2-n">6+</div><div class="ci2-l">Years Experience</div><div class="ci2-s">Since 2019</div></div>
+    <div class="ci2"><div class="ci2-n">50+</div><div class="ci2-l">Projects Delivered</div><div class="ci2-s">Globally</div></div>
+    <div class="ci2"><div class="ci2-n">5</div><div class="ci2-l">Organisations</div><div class="ci2-s">Worked With</div></div>
+    <div class="ci2"><div class="ci2-n">2</div><div class="ci2-l">Colleges Taught At</div><div class="ci2-s">Design Workshops</div></div>
+  </div>
+</div>
 
 <!-- ABOUT -->
-<section id="about" class="about">
-  <div class="section-header">
+<section class="about" id="about">
+  <div class="sh reveal">
     <div>
-      <span class="section-tag">About Me</span>
-      <h2 class="section-title">The Designer<br><em>Behind the Work</em></h2>
+      <span class="se">About</span>
+      <h2 class="st2">The Designer<br><em>Behind the Work</em></h2>
     </div>
   </div>
-  <div class="about-grid">
+  <div class="ag">
     <div>
-      <div class="about-text">
-        <p>Hi, I'm <strong>Bibhushan Jung Sijapati</strong> — a graphic designer based in Kathmandu, Nepal. Since 2019, I've been creating <strong>purposeful, visually engaging design solutions</strong> that capture attention and communicate clearly.</p>
-        <p>I specialize in <strong>YouTube thumbnails, social media graphics, posters,</strong> and clean web visuals. My toolkit includes Adobe Photoshop and Illustrator, and I bring both precision and creativity to every project.</p>
-        <p>Currently available for <strong>freelance and full-time</strong> opportunities worldwide.</p>
+      <p class="at">Hi, I'm <strong>Bibhushan Jung Sijapati</strong> — a graphic designer from Kathmandu with over six years of experience creating visual work that <strong>communicates, converts, and captivates.</strong></p>
+      <p class="at">I specialise in <strong>social media design, product visuals, poster design</strong> and brand campaigns. I've worked across agencies, freelance, and education — currently teaching design at two colleges while continuing to grow as a practitioner.</p>
+      <div class="aq"><p>"Design is not just what it looks like — it's how it works, how it feels, and how it moves people."</p></div>
+      <div class="tools-row">
+        <div class="tc">Photoshop</div><div class="tc">Illustrator</div><div class="tc">Figma</div>
+        <div class="tc">Premiere Pro</div><div class="tc">InDesign</div><div class="tc">Lightroom</div>
       </div>
-      <div class="skills-grid" id="skills-grid">
-        <div class="skill-item">
-          <div class="skill-name">Social Media Design</div>
-          <div class="skill-bar"><div class="skill-fill" data-fill="92"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Poster Design</div>
-          <div class="skill-bar"><div class="skill-fill" data-fill="88"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Photo Manipulation</div>
-          <div class="skill-bar"><div class="skill-fill" data-fill="85"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Product Visuals</div>
-          <div class="skill-bar"><div class="skill-fill" data-fill="80"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Brand Identity</div>
-          <div class="skill-bar"><div class="skill-fill" data-fill="78"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Adobe Photoshop</div>
-          <div class="skill-bar"><div class="skill-fill" data-fill="95"></div></div>
-        </div>
-      </div>
+      <a href="#contact" class="btn-p" style="display:inline-block;margin-top:16px;">Work With Me</a>
     </div>
-    <div class="about-visual">
-      <img class="about-img-main" src="https://mir-s3-cdn-cf.behance.net/projects/404/8d8180225079721.Y3JvcCwxMDgwLDg0NCwwLDA.png" alt="Featured Work">
-      <img class="about-img-accent" src="https://mir-s3-cdn-cf.behance.net/projects/404/1a9df3225171597.Y3JvcCwxMDgwLDg0NCwwLDE2.jpg" alt="Tea Day">
-      <div class="about-badge">Since 2019</div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services">
-  <div class="section-header">
-    <div>
-      <span class="section-tag">What I Do</span>
-      <h2 class="section-title">Design<br><em>Services</em></h2>
-    </div>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-num">01</div>
-      <div class="service-title">Social Media Design</div>
-      <p class="service-desc">Eye-catching posts, reels covers, and campaign visuals that stop the scroll and communicate your brand message instantly.</p>
-      <div class="service-tags">
-        <span class="tag">Instagram</span>
-        <span class="tag">Facebook</span>
-        <span class="tag">Campaigns</span>
-      </div>
-    </div>
-    <div class="service-card" style="transition-delay:0.15s">
-      <div class="service-num">02</div>
-      <div class="service-title">Poster & Print Design</div>
-      <p class="service-desc">From minimal music posters to event announcements — clean, bold compositions with intentional typography and lasting impact.</p>
-      <div class="service-tags">
-        <span class="tag">Events</span>
-        <span class="tag">Music</span>
-        <span class="tag">Cultural</span>
-      </div>
-    </div>
-    <div class="service-card" style="transition-delay:0.3s">
-      <div class="service-num">03</div>
-      <div class="service-title">Product Visuals</div>
-      <p class="service-desc">Product-centric compositions that highlight craftsmanship and desirability — built for digital advertising and e-commerce.</p>
-      <div class="service-tags">
-        <span class="tag">Ad Creative</span>
-        <span class="tag">E-commerce</span>
-        <span class="tag">Photoshop</span>
-      </div>
+    <div class="av">
+      <div class="ab">Kathmandu · Nepal</div>
+      <img class="aim" src="https://mir-s3-cdn-cf.behance.net/projects/404/8d8180225079721.Y3JvcCwxMDgwLDg0NCwwLDA.png" alt="">
+      <img class="aif" src="https://mir-s3-cdn-cf.behance.net/projects/404/1a9df3225171597.Y3JvcCwxMDgwLDg0NCwwLDE2.jpg" alt="">
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" style="padding:120px 56px">
-  <div class="section-header">
+<section class="exp-s" id="experience">
+  <div class="sh reveal">
     <div>
-      <span class="section-tag">Experience</span>
-      <h2 class="section-title">Where I've<br><em>Worked</em></h2>
+      <span class="se">Experience</span>
+      <h2 class="st2">Where I've<br><em>Made an Impact</em></h2>
     </div>
   </div>
-  <div class="exp-list">
-   <div class="exp-item">
-      <div class="exp-company">Kuleshwor Awas Campus</div>
-      <div>
-        <div class="exp-role">Faculty Member</div>
-        <div class="exp-desc">Held workshop of Graphic Design, UI/UX, Presentation and many more. </div>
-      </div>
-      <div class="exp-year">2024 – Present</div>
+  <div class="exp-l">
+    <div class="exp-i"><div class="exp-co">Kuleshwor Awas Campus</div><div><div class="exp-ro">Faculty Member — Design</div><div class="exp-de">Conducted workshops on Graphic Design, UI/UX, and Presentation skills — mentoring the next generation of creatives.</div></div><div class="exp-yr">2024 – Present</div></div>
+    <div class="exp-i"><div class="exp-co">Kist College</div><div><div class="exp-ro">Design Workshop Facilitator</div><div class="exp-de">Delivered practical workshops on Graphic Design, digital tools, and visual communication for students.</div></div><div class="exp-yr">2023 – Present</div></div>
+    <div class="exp-i"><div class="exp-co">Jagaran Nepal</div><div><div class="exp-ro">Freelance Designer</div><div class="exp-de">Creating purposeful visual content and design solutions for campaigns, communications, and brand storytelling.</div></div><div class="exp-yr">2022 – Present</div></div>
+    <div class="exp-i"><div class="exp-co">Alternative Technology</div><div><div class="exp-ro">Designer</div><div class="exp-de">Produced a wide range of social media designs and digital marketing assets that elevated the brand's visual identity.</div></div><div class="exp-yr">2021 – 2022</div></div>
+    <div class="exp-i"><div class="exp-co">Mayan Media & IT</div><div><div class="exp-ro">Social Media Designer</div><div class="exp-de">Managed visual identity across social platforms, producing consistent, engaging, and high-performing content.</div></div><div class="exp-yr">2019 – 2021</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc-s" id="services">
+  <div class="sh reveal">
+    <div>
+      <span class="se">What I Offer</span>
+      <h2 class="st2">Design<br><em>Services</em></h2>
     </div>
-   <div class="exp-item">
-      <div class="exp-company">Kist College</div>
-      <div>
-        <div class="exp-role">Design Workshop</div>
-        <div class="exp-desc">Held workshop of Graphic Design, UI/UX, Presentation and many more. </div>
-      </div>
-      <div class="exp-year">2023 – Present</div>
+  </div>
+  <div class="sg">
+    <div class="sv"><div class="sv-n">01</div><div class="sv-t">Social Media Design</div><p class="sv-d">Eye-catching posts, stories, and full campaign visuals that stop the scroll and build brand recognition across every platform.</p><div class="sv-tags"><span class="sv-tag">Instagram</span><span class="sv-tag">Facebook</span><span class="sv-tag">Campaigns</span></div></div>
+    <div class="sv" style="transition-delay:.15s"><div class="sv-n">02</div><div class="sv-t">Poster & Print Design</div><p class="sv-d">Bold compositions with intentional typography — from minimal posters to high-energy event announcements with lasting impact.</p><div class="sv-tags"><span class="sv-tag">Events</span><span class="sv-tag">Music</span><span class="sv-tag">Cultural</span></div></div>
+    <div class="sv" style="transition-delay:.3s"><div class="sv-n">03</div><div class="sv-t">Product Visuals</div><p class="sv-d">Studio-quality product compositions built for digital advertising, e-commerce and brand storytelling that sells.</p><div class="sv-tags"><span class="sv-tag">E-commerce</span><span class="sv-tag">Ads</span><span class="sv-tag">Compositing</span></div></div>
+    <div class="sv" style="transition-delay:.1s"><div class="sv-n">04</div><div class="sv-t">YouTube Thumbnails</div><p class="sv-d">High-CTR thumbnails engineered with visual psychology — making viewers click before they even read the title.</p><div class="sv-tags"><span class="sv-tag">YouTube</span><span class="sv-tag">CTR</span><span class="sv-tag">Branding</span></div></div>
+    <div class="sv" style="transition-delay:.25s"><div class="sv-n">05</div><div class="sv-t">Brand Identity</div><p class="sv-d">Cohesive visual systems — logos, colour palettes, type pairings and guidelines that make brands instantly recognisable.</p><div class="sv-tags"><span class="sv-tag">Logo</span><span class="sv-tag">Guidelines</span><span class="sv-tag">Visual System</span></div></div>
+    <div class="sv" style="transition-delay:.4s"><div class="sv-n">06</div><div class="sv-t">Design Workshops</div><p class="sv-d">Hands-on design education for students and professionals — covering Photoshop, Illustrator, UI/UX and visual communication.</p><div class="sv-tags"><span class="sv-tag">Teaching</span><span class="sv-tag">Workshops</span><span class="sv-tag">Mentoring</span></div></div>
+  </div>
+</section>
+
+<!-- ARTICLES TEASER -->
+<section class="art-t" id="article">
+  <div class="sh reveal">
+    <div>
+      <span class="se">Thoughts & Writing</span>
+      <h2 class="st2">Articles &<br><em>Journal</em></h2>
     </div>
-    <div class="exp-item">
-      <div class="exp-company">Jagaran Nepal</div>
-      <div>
-        <div class="exp-role">Freelance Designer</div>
-        <div class="exp-desc">Creating visual content and design solutions for campaigns and communications.</div>
-      </div>
-      <div class="exp-year">2022 – Present</div>
+    <a href="articles.html" class="sl">Read All Articles →</a>
+  </div>
+  <div class="art-g">
+    <div class="ac">
+      <div class="ac-tag">Design Thinking</div>
+      <div class="ac-date">March 2025</div>
+      <div class="ac-title">Why Good Design Is Never Finished</div>
+      <div class="ac-exc">Every great piece of design begins with discomfort — a restlessness with the ordinary. Here's what six years of iteration has taught me.</div>
+      <a href="articles.html" class="ac-link">Read Article →</a>
     </div>
-    <div class="exp-item">
-      <div class="exp-company">Alternative Technology</div>
-      <div>
-        <div class="exp-role">Designer</div>
-        <div class="exp-desc">Produced a wide range of social media post designs and digital marketing assets for the brand.</div>
-      </div>
-      <div class="exp-year">2021 – 2022</div>
+    <div class="ac" style="transition-delay:.12s">
+      <div class="ac-tag">Process</div>
+      <div class="ac-date">January 2025</div>
+      <div class="ac-title">My Photoshop Workflow for Product Compositing</div>
+      <div class="ac-exc">A behind-the-scenes look at how I approach product visual compositions from brief to final export.</div>
+      <a href="articles.html" class="ac-link">Read Article →</a>
     </div>
-    <div class="exp-item">
-      <div class="exp-company">Mayan Media & IT</div>
-      <div>
-        <div class="exp-role">Social Media Designer</div>
-        <div class="exp-desc">Managed visual identity across social platforms, producing consistent and engaging content.</div>
-      </div>
-      <div class="exp-year">2019 – 2021</div>
+    <div class="ac" style="transition-delay:.24s">
+      <div class="ac-tag">Nepal Design</div>
+      <div class="ac-date">October 2024</div>
+      <div class="ac-title">Designing in Kathmandu: Local Craft, Global Reach</div>
+      <div class="ac-exc">What it means to grow as a designer in Nepal — the challenges, opportunities, and why geography is never a limitation.</div>
+      <a href="articles.html" class="ac-link">Read Article →</a>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="contact-inner">
-    <span class="contact-pre">Let's Work Together</span>
-    <h2 class="contact-title">Have a project<br><em>in mind?</em></h2>
-    <p class="contact-sub">I'm open to freelance, full-time, and collaborative opportunities.</p>
-    <a href="mailto:bibhushan@example.com" class="contact-email">bibhushanjung@gmail.com</a>
-    <div class="social-links">
-      <a href="https://www.behance.net/bibhushsijapat" class="social-link" target="_blank">Behance</a>
-      <a href="http://twitter.com/thebigfatman__" class="social-link" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/in/bibhushan-jung-sijapati-82787a196/" class="social-link" target="_blank">LinkedIn</a>
+<section class="contact" id="contact">
+  <div class="cg">LET'S WORK</div>
+  <div class="ci3">
+    <span class="ce">Let's Create Together</span>
+    <h2 class="ch">Ready to start<br>your <em>next project?</em></h2>
+    <p class="cs">Open to freelance, full-time &amp; long-term creative partnerships.</p>
+    <div><a href="mailto:bibhushanjung@gmail.com" class="cem">bibhushanjung@gmail.com</a></div>
+    <div class="cin">
+      <div class="cin-i"><div class="cin-l">Location</div><div class="cin-v">Kathmandu, Nepal</div></div>
+      <div class="cin-i"><div class="cin-l">Availability</div><div class="cin-v">Open to Work ✓</div></div>
+      <div class="cin-i"><div class="cin-l">Response Time</div><div class="cin-v">Within 24 hours</div></div>
+    </div>
+    <div class="srow">
+      <a href="https://www.behance.net/bibhushsijapat" class="sa" target="_blank">Behance</a>
+      <a href="http://twitter.com/thebigfatman__" class="sa" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/bibhushan-jung-sijapati-82787a196/" class="sa" target="_blank">LinkedIn</a>
     </div>
   </div>
 </section>
 
 <footer>
   <span>© 2026 Bibhushan Jung Sijapati</span>
-  <span>Kathmandu, Nepal — Designer</span>
-  <span>Available for Work</span>
+  <span>Kathmandu, Nepal — Graphic Designer</span>
+  <a href="articles.html">Articles & Journal</a>
 </footer>
 
 <script>
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx+'px'; cursor.style.top = my+'px'; });
-  function animRing() { rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12; ring.style.left = rx+'px'; ring.style.top = ry+'px'; requestAnimationFrame(animRing); }
-  animRing();
-
-  // Nav scroll
-  const nav = document.getElementById('navbar');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
-
-  // Intersection Observer
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.stat, .work-card, .service-card, .exp-item').forEach(el => io.observe(el));
-
-  // Skill bars
-  const skillsObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting) {
-        e.target.querySelectorAll('.skill-fill').forEach(bar => {
-          bar.style.width = bar.dataset.fill + '%';
-        });
-        skillsObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  const sg = document.getElementById('skills-grid');
-  if(sg) skillsObs.observe(sg);
+const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function t(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(t);})();
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>50));
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis');});},{threshold:.1});
+document.querySelectorAll('.reveal,.exp-i,.sv,.ac,.ci2,.wc').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
